@@ -1,0 +1,21 @@
+#Alternating case
+
+def reformat_string(s):
+    result = []
+    toggle = True  # Start with uppercase for the first alphabet character
+    
+    for char in s:
+        if char.isalpha():  # Check if the character is alphabetical
+            if toggle:
+                result.append(char.upper())  # Uppercase if toggle is True
+            else:
+                result.append(char.lower())  # Lowercase if toggle is False
+            toggle = not toggle  # Flip the toggle for the next alphabetical character
+        else:
+            result.append(char)  # Non-alphabetical characters remain unchanged
+
+    return ''.join(result)
+
+# Example usage
+input_str = "Za^B8g@E2jH*kWl!MoPqXr7YvT1c$Fs3Ud9IwZ&yX0pLkV6sHqN^tB4rA+oZ%gFj"
+print(reformat_string(input_str))

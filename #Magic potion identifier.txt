@@ -1,0 +1,16 @@
+#Magic potion identifier
+import math
+
+def is_magical(power):
+    cube_root = power ** (1/3)  # Find cube root and round off
+    if cube_root.is_integer():
+ #** 3 == power: Check if it's a cube
+        return "YES"
+    else:
+        return "NO"
+
+# Test cases
+test_cases = [27, 30, 132651201231]
+
+for power in test_cases:
+    print(is_magical(power))

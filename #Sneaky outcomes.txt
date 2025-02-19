@@ -1,0 +1,25 @@
+#Sneaky outcomes
+
+def find_duplicates(outcomes):
+    seen = set()
+    duplicates = set()
+
+    for num in outcomes:
+        if num in seen:
+            duplicates.add(num)  # If already seen, add to duplicates
+        else:
+            seen.add(num)  # Otherwise, add to seen set
+
+    return list(duplicates)  # Convert set to list for output
+
+# Test cases
+test_cases = [
+    [0, 3, 2, 1, 3, 2],  # Expected output: [2, 3]
+    [7, 1, 5, 4, 3, 4, 6, 0, 9, 5, 8, 2],  # Expected output: [4, 5]
+    [0, 1, 2, 3, 4, 5, 5, 0],  # Expected output: [0, 5]
+    [123456, 234567, 123347, 456789, 567890, 678901, 789012, 890123, 
+     901234, 112233, 223344, 334455, 789012, 222234, 123347]  # Expected output: [789012, 123347]
+]
+
+for outcomes in test_cases:
+    print(find_duplicates(outcomes))
