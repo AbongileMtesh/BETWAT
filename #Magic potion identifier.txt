@@ -9,8 +9,8 @@ def is_magical(power):
     else:
         return "NO"
 
-# Test cases
-test_cases = [27, 30, 132651201231]
+# Test case
+test_case = [132651201231]
 
-for power in test_cases:
+for power in test_case:
     print(is_magical(power))
