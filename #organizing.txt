@@ -8,7 +8,7 @@ def can_organize_books(shelf):
     if not shelf:
         return "NO"
 
-    # Count occurrences of each book
+    # Count how many times book appears
     book_counts = Counter(shelf)
 
     # Identify any book that appears only twice
